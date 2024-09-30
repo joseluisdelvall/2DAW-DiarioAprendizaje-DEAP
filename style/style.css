@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #e3e3e3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.listaFix {
+    margin-left: 20px;
+}
+
+body {
+    background-color: #181a21;
+    /* background-color: #e3e3e3; */
+}
+
+/*
+    COLORES 
+
+    AZUL - #02aaf2
+    NEGRO SELECCION - #1f2127
+    NEGRO FONDO - #181a21
+
+*/
+
+header {
+    background-color: #181a21;
+    border-bottom: 1px solid #252525;
+    padding: 10px 20px 10px 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    position: sticky;
+    top: 0;
+}
+
+header > a {
+    text-decoration: none;
+    padding: 1vh;
+}
+
+header > a:hover{
+    color: #02aaf2;
+    transition: 0.3s;
+}
+
+header > a:first-child {
+    margin-right: 2vw;
+}
+
+header > div {
+    flex-grow: 1;
+}
+
+h1, h2 {
+    color: #02aaf2;
+    scroll-margin-top: 100px;
+}
+
+h1 {
+    margin: 5vh 0 5vh 0;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    margin: 2vh 0 2vh 0;
+    font-size: 2em;
+}
+
+h3 {
+    margin: 1vh 0 1vh 0;
+    font-size: 1.4em;
+}
+
+.textoRojo {
+    color: red;
+}
+
+.tamanoImagenFull {
+    width: 80%;
+}
+
+/* -------------------------------- HOME -------------------------------- */
+
+#homeBody > main > p {
+    margin: 2vh;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#grid3x2 {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 10vh 0;
+    padding: 10vh 10vw;
+}
+
+#grid3x2 > a  {
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+#grid3x2 > a:hover {
+    background-color: #272a35;
+    transition: .3s;
+}
+
+#grid3x2 > a > div {
+    text-align: center;
+    padding: 1vh 1vw;
+    margin: 1vh 1vw;
+}
+
+#grid3x2 > a > div > h2 {
+    margin-bottom: 1vh;
+}
+
+/* -------------------------------- TEMAS -------------------------------- */
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+/* --------------------- HEADER --------------------- */
+
+.gridLayout > header {
+    grid-column: 1 / 3;
+}
+
+/* --------------------- ASIDE --------------------- */
+
+.gridLayout > aside {
+    border-right: 1px solid #464646;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.gridLayout > aside > ul {
+    list-style: none;
+    position: sticky;
+    top: 85px;
+}
+
+.gridLayout > aside > ul > a {
+    text-decoration: none;
+}
+
+.gridLayout > aside > ul > a > li {
+    padding: 1vh 1vw;
+    border-radius: 5px;
+}
+
+.gridLayout > aside > ul > a > li:hover {
+    color: #02aaf2;
+    background-color: #272a35;
+    transition: .3s;
+}
+
+/* --------------------- MAIN --------------------- */
+
+.gridLayout > main {
+    min-height: 85vh;
+    padding: 0 3vw;
+}
+
+.gridLayout > main > section > article > h2 {
+    margin: 3vh 0 0 0;
+    border-bottom: 1px solid #464646;
+    padding-bottom: 1vh;
+    width: fit-content;
+}
+
+.gridLayout > main > section > article > p {
+    margin: 2vh 0;
+}
+
+.gridLayout > main > section > article > div[class="imagen"] {
+    text-align: center;
+}
+
+.gridLayout > footer {
+    color: white;
+    padding: 10px;
+    grid-column: 1 / 3;
+}
+
+#tarjetasDe4 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10vh 0;
+    padding: 5vh 5vw;
+}
+
+#tarjetasDe4 > div > * {
+    text-align: center;
+}
+
+#tarjetasDe4 > div {
+    border-radius: 10px;
+    padding: 1vh 1vw;
+}
+
+#tarjetasDe4 > div:hover {
+    background-color: #272a35;
+    transition: .3s;
+}
