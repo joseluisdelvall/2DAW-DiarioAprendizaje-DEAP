@@ -89,6 +89,46 @@ h4 {
     width: 80%;
 }
 
+/* ---------------------------- CLASES TARJETAS ---------------------------- */
+
+.tarjetas {
+    display: grid;
+    gap: 5vh 0;
+    padding: 5vh 5vw;
+}
+
+.dosCols {
+    grid-template-columns: 50% 50%;
+}
+
+.cuatroCols {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+@media (max-width: 768px) {
+    .dosCols {
+        grid-template-columns: 100%;
+    }
+    
+    .cuatroCols {
+        grid-template-columns: 100%;
+    }
+}
+
+.tarjetas > div > * {
+    text-align: center;
+}
+
+.tarjetas > div {
+    border-radius: 10px;
+    padding: 1vh 1vw;
+}
+
+.tarjetas > div:hover {
+    background-color: #272a35;
+    transition: .3s;
+}
+
 /* -------------------------------- HOME -------------------------------- */
 
 #homeBody > main > p {
@@ -195,23 +235,24 @@ h4 {
     grid-column: 1 / 3;
 }
 
-#tarjetasDe4 {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    gap: 10vh 0;
-    padding: 5vh 5vw;
+/* --------------------- TEMA 1 GIT --------------------- */
+
+/* Untracked */
+#estados > div:nth-child(1) > h4 {
+    color: #59b985;
 }
 
-#tarjetasDe4 > div > * {
-    text-align: center;
+/* Unmodified */
+#estados > div:nth-child(2) > h4 {
+    color: #59b6b9;
 }
 
-#tarjetasDe4 > div {
-    border-radius: 10px;
-    padding: 1vh 1vw;
+/* Modified */
+#estados > div:nth-child(3) > h4 {
+    color: #c4b28f;
 }
 
-#tarjetasDe4 > div:hover {
-    background-color: #272a35;
-    transition: .3s;
+/* Staged */
+#estados > div:nth-child(4) > h4 {
+    color: #a9aa4e;
 }
