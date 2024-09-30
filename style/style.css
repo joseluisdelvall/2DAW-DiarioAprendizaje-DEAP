@@ -55,7 +55,7 @@ header > div {
     flex-grow: 1;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #02aaf2;
     scroll-margin-top: 100px;
 }
@@ -72,6 +72,11 @@ h2 {
 }
 
 h3 {
+    margin: 1vh 0 1vh 0;
+    font-size: 1.6em;
+}
+
+h4 {
     margin: 1vh 0 1vh 0;
     font-size: 1.4em;
 }
@@ -169,7 +174,7 @@ h3 {
     padding: 0 3vw;
 }
 
-.gridLayout > main > section > article > h2 {
+.gridLayout > main > section > h2, .gridLayout > main > section > article > h3 {
     margin: 3vh 0 0 0;
     border-bottom: 1px solid #464646;
     padding-bottom: 1vh;
