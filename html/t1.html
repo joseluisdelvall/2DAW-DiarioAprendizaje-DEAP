@@ -23,7 +23,7 @@
             <ul>
                 <a href="#inicio"><li>Inicio</li></a>
                 <a href="#introduccion"><li>Introducción</li></a>
-                <a href="#comandosBasicos"><li>Comandos Básicos</li></a>
+                <a href="#primerospasos"><li>Primeros pasos GIT</li></a>
                 <a href="#comandosFrecuentes"><li>Comandos Frecuentes</li></a>
             </ul>
         </aside>
@@ -101,7 +101,67 @@
                 </article>
             </section>
             <section>
-                <h2 id="comandosBasicos">Comandos Básicos</h2>
+                <h2 id="primerospasos">Primeros pasos GIT</h2>
+                <article>
+                    <h3>Inicio de un repositorio local</h3>
+                    <p>
+                        Para iniciar un repositorio local, se debe utilizar el comando <b>git init</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git init</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Renombrar la rama principal</h3>
+                    <p>
+                        Para cambiar el nombre de la rama principal para que coincida con github (master -> main), se debe utilizar el siguiente comando:
+                    </p>
+                    <div class="codigo">
+                        <p>git branch -m main <span class="comentario">Renombrar rama para que coincida con GITHUB</span></p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Primer Commit</h3>
+                    <p>
+                        Para realizar el primer commit, se deben seguir los siguientes pasos:
+                    </p>
+                    <div class="codigo">
+                        <p>git commit -m "Primer commit"</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Configuración cuenta de GIT</h3>
+                    <p>
+                        Necesitamos configurar la cuenta de GIT para los siguientes pasos, se hace de la siguiente manera:
+                    </p>
+                    <div class="codigo">
+                        <p>git config --global user.name "<i>Tu nombre</i>"</p>
+                        <p>git config --global user.email "<i>Tu email</i>"</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Crear puntero a repositorio remoto</h3>
+                    <p>
+                        Para crear un puntero al repositorio remoto, se debe utilizar el comando <b>git remote add</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git remote add &lt;nombreRepositorio&gt; &lt;URL&gt;</p>
+                        <p>git remote add origin https://estoesuna.url.com/aaaa.git</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Subir repositorio local al repositorio remoto</h3>
+                    <p>
+                        Para subir los cambios al repositorio remoto, se debe utilizar el comando <b>git push</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git push &lt;repositorio_remoto&gt; &lt;rama&gt;</p>
+                        <p>git push origin main</p>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <h2 id="comandosFrecuentes">Comandos Frecuentes</h2>
                 <article>
                     <h3>Comandos de Ayuda</h3>
                     <p>
@@ -113,25 +173,38 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Configuración de GIT</h3>
-                    <p>
-                        Para configurar GIT, se deben utilizar los siguientes comandos:
-                    </p>
-                    <div class="codigo">
-                        <p>git config --global user.name "<i>Tu nombre</i>"</p>
-                        <p>git config --global user.email "<i>Tu email</i>"</p>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <h2 id="comandosFrecuentes">Comandos Frecuentes</h2>
-                <article>
                     <h3>Iniciar Repositorio local</h3>
                     <p>
                         Para iniciar un repositorio local, se debe utilizar el comando <b>git init</b>.
                     </p>
                     <div class="codigo">
                         <p>git init</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Marcar archivos</h3>
+                    <p>
+                        Para marcar un archivo, se debe utilizar el comando <b>git add</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git add &lt;archivo&gt;</p>
+                        <p>git add .<span class="comentario">Añade todos los archivos</span></p>
+                        <p>git add *.html<span class="comentario">Añade todos los archivos con extensión .html</span></p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Comandos de estado</h3>
+                    <p>
+                        Para ver el estado de los archivos, se debe utilizar el comando <b>git status</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git status</p>
+                    </div>
+                    <p>
+                        Para ver el historial de cambios, se debe utilizar el comando <b>git log</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git log --oneline</p>
                     </div>
                 </article>
             </section>

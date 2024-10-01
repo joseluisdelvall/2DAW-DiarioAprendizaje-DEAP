@@ -117,6 +117,20 @@ h4 {
     padding: 3vh 3vw;
 }
 
+.comentario {
+    margin-left: 1vw;
+    color: #628f44;
+    font-style: italic;
+}
+
+.comentario::before {
+    content: "/* ";
+}
+
+.comentario::after {
+    content: " */";
+}
+
 .textoRojo {
     color: red;
 }
