@@ -184,6 +184,7 @@ h4 {
 @media (max-width: 768px) {
     #grid3x2 {
         grid-template-columns: 100%;
+        gap: 4vh 0;
     }
 }
 
