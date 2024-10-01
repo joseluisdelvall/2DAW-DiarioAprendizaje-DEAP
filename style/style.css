@@ -37,6 +37,12 @@ header {
     top: 0;
 }
 
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+}
+
 header > a {
     text-decoration: none;
     padding: 1vh;
@@ -53,6 +59,29 @@ header > a:first-child {
 
 header > div {
     flex-grow: 1;
+}
+
+.mobileNav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1vh 2vw;
+    background-color: #181a21;
+}
+
+.mobileNav > div {
+    background-color: #272a35;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    .mobileNav {
+        display: block; /* visualizamos el nav */
+    }
 }
 
 h1, h2, h3 {
@@ -179,6 +208,12 @@ h4 {
     grid-template-columns: 15% 85%;
 }
 
+@media (max-width: 768px) {
+    .gridLayout {
+        grid-template-columns: 100%;
+    }
+}
+
 /* --------------------- HEADER --------------------- */
 
 .gridLayout > header {
@@ -191,6 +226,12 @@ h4 {
     border-right: 1px solid #464646;
     padding: 10px;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .gridLayout > aside {
+        display: none;
+    }
 }
 
 .gridLayout > aside > ul {
