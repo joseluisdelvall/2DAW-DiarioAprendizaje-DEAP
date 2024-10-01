@@ -181,6 +181,12 @@ h4 {
     padding: 10vh 10vw;
 }
 
+@media (max-width: 768px) {
+    #grid3x2 {
+        grid-template-columns: 100%;
+    }
+}
+
 #grid3x2 > a  {
     text-decoration: none;
     border-radius: 15px;
