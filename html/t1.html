@@ -20,19 +20,24 @@
             <a href=""><img src="../img/lunaNoche.svg" alt=""></a>
         </header>
         <aside>
-            <ul>
-                <a href="#inicio"><li>Inicio</li></a>
-                <a href="#introduccion"><li>Introducción</li></a>
-                <a href="#primerospasos"><li>Primeros pasos GIT</li></a>
-                <a href="#comandosFrecuentes"><li>Comandos Frecuentes</li></a>
-            </ul>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#introduccion">Introducción</a>
+                <div>
+                    <a href="#qesgit">¿Qué es GIT?</a>
+                    <a href="#areaTrabajo">Áreas de trabajo</a>
+                    <a href="#estadoArchivos">Estados archivos</a>
+                </div>
+                <a href="#primerospasos">Primeros pasos GIT</a>
+                <a href="#comandosFrecuentes">Comandos Frecuentes</a>
+            </nav>
         </aside>
         <main>
             <h1 id="inicio">Tema 1 - GIT</h1>
             <section>
                 <h2 id="introduccion">Introducción a GIT</h2>
                 <article>
-                    <h3>¿Qué es GIT?</h3>
+                    <h3 id="qesgit">¿Qué es GIT?</h3>
                     <p>
                         GIT es un servicio de comunicación y gestión de información entre local y remoto,
                         con el cual puedes llevar un registro de los cambios en un archivo o el proyecto,
@@ -43,7 +48,7 @@
                     </p>
                 </article>
                 <article>
-                    <h3>Áreas de trabajo</h2>
+                    <h3 id="areaTrabajo">Áreas de trabajo</h2>
                     <div class="tarjetas dosCols">
                         <div>
                             <h4>Directorio de trabajo</h4>
@@ -72,7 +77,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Estados de los archivos en GIT</h3>
+                    <h3 id="estadoArchivos">Estados de los archivos en GIT</h3>
                     <div id="estados" class="tarjetas cuatroCols">
                         <div>
                             <h4>Untracked</h4>
@@ -118,6 +123,17 @@
                     </p>
                     <div class="codigo">
                         <p>git branch -m main <span class="comentario">Renombrar rama para que coincida con GITHUB</span></p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Marcar los archivos a GIT</h3>
+                    <p>
+                        Para marcar los archivos del directorio tenemos que hacer <b>git push</b>
+                    </p>
+                    <div class="codigo">
+                        <p>git add &lt;archivo&gt;</p>
+                        <p>git add .<span class="comentario">Añade todos los archivos</span></p>
+                        <p>git add *.html<span class="comentario">Añade todos los archivos con extensión .html</span></p>
                     </div>
                 </article>
                 <article>

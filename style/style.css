@@ -84,7 +84,7 @@ header > div {
     }
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: #02aaf2;
     scroll-margin-top: 100px;
 }
@@ -101,13 +101,14 @@ h2 {
 }
 
 h3 {
+    color: #0089c4;
     margin: 1vh 0 1vh 0;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 h4 {
     margin: 1vh 0 1vh 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 .codigo {
@@ -255,25 +256,26 @@ h4 {
     }
 }
 
-.gridLayout > aside > ul {
-    list-style: none;
+.gridLayout > aside > nav {
     position: sticky;
     top: 85px;
 }
 
-.gridLayout > aside > ul > a {
+.gridLayout > aside > nav a {
     text-decoration: none;
-}
-
-.gridLayout > aside > ul > a > li {
     padding: 1vh 1vw;
     border-radius: 5px;
+    display: block;
 }
 
-.gridLayout > aside > ul > a > li:hover {
+.gridLayout > aside > nav a:hover {
     color: #02aaf2;
     background-color: #272a35;
     transition: .3s;
+}
+
+.gridLayout > aside > nav > div {
+    margin-left: 1vw;
 }
 
 /* --------------------- MAIN --------------------- */
@@ -285,9 +287,16 @@ h4 {
 
 .gridLayout > main > section > h2, .gridLayout > main > section > article > h3 {
     margin: 3vh 0 0 0;
-    border-bottom: 1px solid #464646;
     padding-bottom: 1vh;
     width: fit-content;
+}
+
+.gridLayout > main > section > h2{
+    border-bottom: 2px solid #464646;
+}
+
+.gridLayout > main > section > article > h3 {
+    border-bottom: 1px solid #464646;
 }
 
 .gridLayout > main > section > article > p {
