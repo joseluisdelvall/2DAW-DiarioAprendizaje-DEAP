@@ -84,7 +84,7 @@ header > div {
     }
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     color: #02aaf2;
     scroll-margin-top: 100px;
 }
@@ -156,12 +156,20 @@ h4 {
     grid-template-columns: 25% 25% 25% 25%;
 }
 
+.cincoCols {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
 @media (max-width: 768px) {
     .dosCols {
         grid-template-columns: 100%;
     }
     
     .cuatroCols {
+        grid-template-columns: 100%;
+    }
+
+    .cincoCols {
         grid-template-columns: 100%;
     }
 }
@@ -276,6 +284,8 @@ h4 {
 
 .gridLayout > aside > nav > div {
     margin-left: 1vw;
+    font-size: 0.9rem;
+    color: #e3e3e3;
 }
 
 /* --------------------- MAIN --------------------- */
@@ -333,4 +343,9 @@ h4 {
 /* Staged */
 #estados > div:nth-child(4) > h4 {
     color: #a9aa4e;
+}
+
+/* Commited */
+#estados > div:nth-child(5) > h4 {
+    color: #60aa4e;
 }
