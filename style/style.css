@@ -7,6 +7,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+::selection {
+    background-color: #414557;
+    color: #e3e3e3;
+}
+
+::-moz-selection {
+    background-color: #414557;
+    color: #e3e3e3;
+}
+
 .listaFix {
     margin-left: 20px;
 }
@@ -116,6 +126,33 @@ h4 {
     border-radius: 15px;
     margin: 3vh 3vw;
     padding: 3vh 3vw;
+}
+
+.codigo p {
+    width: fit-content;
+}
+
+.codigo p:hover {
+    cursor: pointer;
+}
+
+#mensajeCopiado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #272a35d0;
+    border: 1px solid #181a21;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    display: none;
+    z-index: 9999;
+}
+
+#mensajeCopiado::before {
+    content: "Copiado";
 }
 
 .comentario {
