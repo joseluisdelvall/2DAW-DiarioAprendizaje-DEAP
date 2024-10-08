@@ -9,6 +9,7 @@
 
         <!-- JS -->
         <script src="../js/copiarTexto.js"></script>
+        <script src="../js/nav.js"></script>
     </head>
     <body class="gridLayout">
         <header>
@@ -26,18 +27,31 @@
             <nav>
                 <a href="#inicio">Inicio</a>
                 <a href="#introduccion">Introducción</a>
-                <div>
+                <div class="sub-menu" data-section="seccionIntroduccion">
                     <a href="#qesgit">¿Qué es GIT?</a>
                     <a href="#areaTrabajo">Áreas de trabajo</a>
                     <a href="#estadoArchivos">Estados archivos</a>
                 </div>
                 <a href="#primerospasos">Primeros pasos GIT</a>
+                <div class="sub-menu" data-section="seccionPrimerosPasos">
+                    <a href="#inicioRepoLocal">Inicio de un repositorio local</a>
+                    <a href="#renombrarRamaPrincipal">Renombrar la rama principal</a>
+                    <a href="#marcarArchivosGIT">Marcar los archivos a GIT</a>
+                    <a href="#primerCommit">Primer Commit</a>
+                    <a href="#configCuentaGIT">Configuración cuenta de GIT</a>
+                    <a href="#crearPunteroRepo">Crear puntero a repositorio remoto</a>
+                    <a href="#subirRepo">Subir repositorio a Remoto</a>
+                </div>
+                <a href="#ramas">Ramas</a>
+                <div class="sub-menu" data-section="seccionRamas">
+                    <a href="">Crear una rama</a>
+                </div>
                 <a href="#comandosFrecuentes">Comandos Frecuentes</a>
             </nav>
         </aside>
         <main>
             <h1 id="inicio">Tema 1 - GIT</h1>
-            <section>
+            <section id="seccionIntroduccion">
                 <h2 id="introduccion">Introducción a GIT</h2>
                 <article>
                     <h3 id="qesgit">¿Qué es GIT?</h3>
@@ -114,10 +128,10 @@
                         </div>
                 </article>
             </section>
-            <section>
+            <section id="seccionPrimerosPasos">
                 <h2 id="primerospasos">Primeros pasos GIT</h2>
                 <article>
-                    <h3>Inicio de un repositorio local</h3>
+                    <h3 id="inicioRepoLocal">Inicio de un repositorio local</h3>
                     <p>
                         Para iniciar un repositorio local, se debe utilizar el comando <b>git init</b>.
                     </p>
@@ -126,7 +140,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Renombrar la rama principal</h3>
+                    <h3 id="renombrarRamaPrincipal">Renombrar la rama principal</h3>
                     <p>
                         Para cambiar el nombre de la rama principal para que coincida con github (master -> main), se debe utilizar el siguiente comando:
                     </p>
@@ -135,9 +149,9 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Marcar los archivos a GIT</h3>
+                    <h3 id="marcarArchivosGIT">Marcar los archivos a GIT</h3>
                     <p>
-                        Para marcar los archivos del directorio tenemos que hacer <b>git push</b>
+                        Para marcar los archivos del directorio tenemos que hacer <b>git add</b>
                     </p>
                     <div class="codigo">
                         <p>git add &lt;archivo&gt;</p>
@@ -146,7 +160,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Primer Commit</h3>
+                    <h3 id="primerCommit">Primer Commit</h3>
                     <p>
                         Para realizar el primer commit, se deben seguir los siguientes pasos:
                     </p>
@@ -155,7 +169,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Configuración cuenta de GIT</h3>
+                    <h3 id="configCuentaGIT">Configuración cuenta de GIT</h3>
                     <p>
                         Necesitamos configurar la cuenta de GIT para los siguientes pasos, se hace de la siguiente manera:
                     </p>
@@ -165,7 +179,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Crear puntero a repositorio remoto</h3>
+                    <h3 id="crearPunteroRepo">Crear puntero a repositorio remoto</h3>
                     <p>
                         Para crear un puntero al repositorio remoto, se debe utilizar el comando <b>git remote add</b>.
                     </p>
@@ -175,7 +189,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Subir repositorio local al repositorio remoto</h3>
+                    <h3 id="subirRepo">Subir repositorio local al repositorio remoto</h3>
                     <p>
                         Para subir los cambios al repositorio remoto, se debe utilizar el comando <b>git push</b>.
                     </p>
@@ -184,6 +198,20 @@
                         <p>git push origin main</p>
                     </div>
                 </article>
+            </section>
+            <section id="seccionRamas">
+                <h2 id="ramas">Ramas</h2>
+                <article>
+                    <h3>Crear una rama</h3>
+                    <p>
+                        Para crear una rama, se debe utilizar el comando <b>git branch</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git branch &lt;nombreRama&gt;</p>
+                        <p>git branch desarrollo</p>
+                    </div>
+                </article>
+
             </section>
             <section>
                 <h2 id="comandosFrecuentes">Comandos Frecuentes</h2>

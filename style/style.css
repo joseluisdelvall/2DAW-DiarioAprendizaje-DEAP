@@ -325,6 +325,10 @@ h4 {
     color: #e3e3e3;
 }
 
+.sub-menu {
+    display: none;
+}
+
 /* --------------------- MAIN --------------------- */
 
 .gridLayout > main {
