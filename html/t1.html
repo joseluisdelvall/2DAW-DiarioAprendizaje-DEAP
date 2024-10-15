@@ -23,6 +23,7 @@
             <div></div>
             <a href=""><img src="../img/lunaNoche.svg" alt=""></a>
         </header>
+        <!-- -------------------------------------- ASIDE -------------------------------------- -->
         <aside>
             <nav>
                 <a href="#inicio">Inicio</a>
@@ -49,6 +50,7 @@
                 <a href="#comandosFrecuentes">Comandos Frecuentes</a>
             </nav>
         </aside>
+        <!-- -------------------------------------- MAIN -------------------------------------- -->
         <main>
             <h1 id="inicio">Tema 1 - GIT</h1>
             <section id="seccionIntroduccion">
@@ -56,7 +58,7 @@
                 <article>
                     <h3 id="qesgit">¿Qué es GIT?</h3>
                     <p>
-                        GIT es un servicio de comunicación y gestión de información entre local y remoto,
+                        GIT es un servicio (estándar) de comunicación y gestión de información entre local y remoto,
                         con el cual puedes llevar un registro de los cambios en un archivo o el proyecto,
                         definiendo diferentes versiones, que pueden recuperarse en cualquier momento.
                     </p>
@@ -199,20 +201,41 @@
                     </div>
                 </article>
             </section>
+            <hr />
             <section id="seccionRamas">
                 <h2 id="ramas">Ramas</h2>
+                <article>
+                    <h3>Ver ramas locales existentes</h3>
+                    <p>
+                        Para ver las ramas locales del repositorio, se debe utilizar el comando <b>git branch</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git branch</p>
+                    </div>
+                </article>
                 <article>
                     <h3>Crear una rama</h3>
                     <p>
                         Para crear una rama, se debe utilizar el comando <b>git branch</b>.
+                        Tenemos que tener en cuenta que <b>debemos estar posicionados en la rama de la cual queremos crear la nueva rama</b>.
                     </p>
                     <div class="codigo">
                         <p>git branch &lt;nombreRama&gt;</p>
                         <p>git branch desarrollo</p>
                     </div>
                 </article>
-
+                <article>
+                    <h3>Renombrar una rama</h3>
+                    <p>
+                        Para renombrar una rama debemos utilizar el comando <b>git branch -m</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git branch -m &lt;old_nombre_rama&gt; &lt;new_nombre_rama&gt;</p>
+                        <p>git branch sprint2 sprint1</p>
+                    </div>
+                </article>
             </section>
+            <hr />
             <section>
                 <h2 id="comandosFrecuentes">Comandos Frecuentes</h2>
                 <article>

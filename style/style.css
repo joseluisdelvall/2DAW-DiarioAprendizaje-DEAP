@@ -121,6 +121,11 @@ h4 {
     font-size: 1.2em;
 }
 
+hr {
+    border: 1px solid #464646;
+    margin: 8vh 0 5vh 0;
+}
+
 .codigo {
     background-color: #272a35;
     border-radius: 15px;
