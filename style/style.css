@@ -94,6 +94,13 @@ header > div {
     }
 }
 
+footer {
+    border-top: 1px solid #252525;
+    background-color: #181a21;
+    padding: 3vh 2vw;
+    text-align: center;
+}
+
 h1, h2, h3 {
     color: #02aaf2;
     scroll-margin-top: 100px;
@@ -365,7 +372,6 @@ hr {
 
 .gridLayout > footer {
     color: white;
-    padding: 10px;
     grid-column: 1 / 3;
 }
 
