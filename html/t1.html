@@ -45,8 +45,15 @@
                 </div>
                 <a href="#ramas">Ramas</a>
                 <div class="sub-menu" data-section="seccionRamas">
-                    <a href="">Crear una rama</a>
+                    <a href="#verRamas">Ver ramas</a>
+                    <a href="#crearRama">Crear una rama</a>
+                    <a href="#renombrarRama">Renombrar rama</a>
+                    <a href="#eliminarRama">Eliminar ramas</a>
                 </div>
+                <a href="#bajarUpdateRepo">Bajar datos repositorio</a>
+                <a href="#rollBack">Rollback</a>
+                <a href="#tag">Tag</a>
+                <a href="#clonarRepo">Clonar repositorio</a>
                 <a href="#comandosFrecuentes">Comandos Frecuentes</a>
             </nav>
         </aside>
@@ -205,7 +212,7 @@
             <section id="seccionRamas">
                 <h2 id="ramas">Ramas</h2>
                 <article>
-                    <h3>Ver ramas locales existentes</h3>
+                    <h3 id="verRamas">Ver ramas locales existentes</h3>
                     <p>
                         Para ver las ramas locales del repositorio, se debe utilizar el comando <b>git branch</b>.
                     </p>
@@ -214,7 +221,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Crear una rama</h3>
+                    <h3 id="crearRama">Crear una rama</h3>
                     <p>
                         Para crear una rama, se debe utilizar el comando <b>git branch</b>.
                         Tenemos que tener en cuenta que <b>debemos estar posicionados en la rama de la cual queremos crear la nueva rama</b>.
@@ -225,13 +232,133 @@
                     </div>
                 </article>
                 <article>
-                    <h3>Renombrar una rama</h3>
+                    <h3 id="renombrarRama">Renombrar una rama</h3>
                     <p>
                         Para renombrar una rama debemos utilizar el comando <b>git branch -m</b>.
                     </p>
                     <div class="codigo">
                         <p>git branch -m &lt;old_nombre_rama&gt; &lt;new_nombre_rama&gt;</p>
                         <p>git branch sprint2 sprint1</p>
+                    </div>
+                </article>
+                <article>
+                    <h3 id="eliminarRama">Eliminar una rama</h3>
+                    <p>
+                        Para eliminar una rama, se debe utilizar el comando <b>git branch -d</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git branch -d &lt;nombreRama&gt;</p>
+                        <p>git branch -d desarrollo</p>
+                    </div>
+                </article>
+            </section>
+            <hr />
+            <section>
+                <h2 id="bajarUpdateRepo">Bajar datos del repositorio</h2>
+                <article>
+                    <h3>Descargar datos del repositorio remoto (sin fusionar)</h3>
+                    <p>
+                        Para descargar los datos del repositorio remoto, se debe utilizar el comando <b>git fetch</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git fetch origin</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Fusionar datos bajados a repositorio local</h3>
+                    <p>
+                        Para fusionar los datos bajados del repositorio remoto al repositorio local, se debe utilizar el comando <b>git merge</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git merge &lt;rama&gt; <span class="comentario">A la rama actual</span></p>
+                        <p>git merge origin/main</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Descargar y fusionar datos del repositorio remoto</h3>
+                    <p>
+                        Para descargar y fusionar los datos del repositorio remoto al repositorio local, se debe utilizar el comando <b>git pull</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git pull origin <span class="comentario">Fusiona el repositorio remoto en el directorio de trabajo local</span></p>
+                        <p>git pull origin &lt;nombre_rama&gt; <span class="comentario">Bajamos una rama específica del servidor remoto</span></p>
+                    </div>
+                </article>
+            </section>
+            <hr />
+            <section>
+                <h2 id="rollBack">Rollback</h2>
+                <article>
+                    <h3>Revertir cambios a un commit pasado</h3>
+                    <p>
+                        Para revertir los cambios a un commit pasado, se debe utilizar el comando <b>git reset</b>.
+                    </p>
+                    <p>
+                        Te lleva al estado del commit anterior revertiendo los cambios y poniendo los archivos en added.
+                    </p>
+                    <div class="codigo">
+                        <p>git reset --soft HEAD^</p>
+                    </div>
+                    <p>
+                        Te lleva al commit anterior borrando el actual y poniendo los archivos en untracked
+                    </p>
+                    <div class="codigo">
+                        <p>git reset --mixed HEAD^</p>
+                    </div>
+                    <p>
+                        Te lleva al commit anterior borrando el actual y borra los archivos
+                    </p>
+                    <div class="codigo">
+                        <p>git reset --hard HEAD^</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Revertir cambios a un commit pasado creando un nuevo commit</h3>
+                    <p>
+                        Para revertir los cambios a un commit pasado, creando un nuevo commit con este estado se debe utilizar el comando <b>git revert</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git revert &lt;id_commit&gt;</p>
+                    </div>
+                </article>
+            </section>
+            <hr />
+            <section>
+                <h2 id="tag">Tag</h2>
+                <article>
+                    <h3>Crear un tag</h3>
+                    <p>
+                        Creamos las tag para identificar los commits importantes, como versiones estables.
+                    </p>
+                    <p>
+                        Para crear un tag, se debe utilizar el comando <b>git tag</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git tag -a &lt;nombre&gt; -m "Mensaje" <span class="comentario">Commit actual</span></p>
+                        <p>git tag -a &lt;nombre&gt; &lt;id_commit&gt; -m "Mensaje"</p>
+                    </div>
+                </article>
+                <article>
+                    <h3>Eliminar un tag</h3>
+                    <p>
+                        Para eliminar un tag, se debe utilizar el comando <b>git tag -d</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git tag -d &lt;nombre_tag&gt;</p>
+                    </div>
+                </article>
+            </section>
+            <hr />
+            <section>
+                <h2 id="clonarRepo">Clonar repositorios</h2>
+                <article>
+                    <h3>Clonar un repositorio</h3>
+                    <p>
+                        Para clonar un repositorio en el directorio actual, se debe utilizar el comando <b>git clone</b>.
+                    </p>
+                    <div class="codigo">
+                        <p>git clone &lt;URL&gt;</p>
+                        <p>git clone https://estoesuna.url.com/aaaa.git</p>
                     </div>
                 </article>
             </section>
