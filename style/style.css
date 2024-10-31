@@ -185,6 +185,10 @@ hr {
     color: red;
 }
 
+.textoAmarillo {
+    color: rgb(255, 161, 46);
+}
+
 .tamanoImagenFull {
     width: 80%;
 }
@@ -199,6 +203,10 @@ hr {
 
 .dosCols {
     grid-template-columns: 50% 50%;
+}
+
+.tresCols {
+    grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
 .cuatroCols {
