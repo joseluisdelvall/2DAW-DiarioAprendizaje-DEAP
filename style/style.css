@@ -133,6 +133,15 @@ hr {
     margin: 8vh 0 5vh 0;
 }
 
+ul, ol {
+    margin: 1vh 1vw;
+}
+
+ol > li, ul > li {
+    margin: 1vh 1vw;
+
+}
+
 .codigo {
     background-color: #272a35;
     border-radius: 15px;
@@ -191,6 +200,19 @@ hr {
 
 .tamanoImagenFull {
     width: 80%;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.centrado {
+    text-align: center;
 }
 
 /* ---------------------------- CLASES TARJETAS ---------------------------- */

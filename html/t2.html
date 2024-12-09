@@ -33,17 +33,182 @@
         <main>
             <h1 id="inicio">Tema 2 - DNS/HTTP<span class="textoAmarillo">S</span></h1>
             <section id="seccionIntroduccionT2">
-                <h2>Introducción a DNS y HTTP</h2>
-                <article>
-                    <h3>¿Qué es DNS?</h3>
-                    <p>
-
-                    </p>
-                </article>
+                <h2>Introducción a HTTP y DNS</h2>
                 <article>
                     <h3>¿Qué es HTTP?</h3>
                     <p>
-
+                        HTTP (Hypertext Transfer Protocol) es un protocolo de comunicación entre un cliente y un servidor.
+                        Su principal propósito es la transferencia de información.
+                    </p>
+                </article>
+                <article>
+                    <h3>¿Qué es DNS?</h3>
+                    <p>
+                        DNS (Domain Name Server) es un sistema que permite traducir nombres de dominio a direcciones IP,
+                        de forma que los usuarios pueden acceder a los servicios de red mediante nombres
+                        haciendolos más fáciles de recordar.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <h2>HTTP</h2>
+                <article>
+                    <h3>Funcionamiento del protocolo HTTP</h3>
+                    <p>
+                        Esquema del funcionamiento del protocolo HTTP:
+                    </p>
+                    <img src="../img/funcionamientoProtocoloHTTP.png" alt="Funcionamiento Protocolo HTTP">
+                    <div class="tarjetas dosCols">
+                        <div>
+                            <h4>Cliente WEB</h4>
+                            <div>
+                                <p>Solicita información y la interpreta</p>
+                                <p>Renderiza en pantalla el resultado</p>
+                                <p>Interactúa con el usuario</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Servidor WEB</h4>
+                            <div>
+                                <p>Sirve contenido estático</p>
+                                <p>Ejecuta programas para generar contenido dinámico (PHP)</p>
+                                <p>Certificados SSL/TLS</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3>Estructura de aplicaciones web</h3>
+                    <p>
+                        Estructura de una aplicación web:
+                    </p>
+                    <img src="../img/estructuraAppMVC.png" alt="Estructura Aplicación Web Modelo Vista Controlador">
+                </article>
+                <article>
+                    <h3>Tipo de solicitudes</h3>
+                    <div class="tarjetas dosCols">
+                        <div>
+                            <h4>GET</h4>
+                            <p>
+                                Se usa para solicitar información al servidor sin modificar los datos en el servidor.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>POST</h4>
+                            <p>
+                                Se usa para enviar información al servidor y modificar los datos en el servidor.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3>HTTP / HTTPS</h3>
+                    <div class="tarjetas dosCols">
+                        <div>
+                            <h4>HTTP</h4>
+                            <p>
+                                Es el protocolo de transferencia sin cifrado,
+                                esto es un problema de seguridad ya que en esta conexion
+                                los datos están expuestos.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>HTTPS</h4>
+                            <p>
+                                Es el protocolo de transferencia con cifrado,
+                                esto es una solución al problema de seguridad de HTTP.
+                                Se necesita un certificado SSL/TLS para poder usar HTTPS.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3>Códigos de estado</h3>
+                    <ul>
+                        <li>1xx - Mensaje informativo</li>
+                        <li>2xx - Exito
+                            <ul>
+                                <li>200 - OK</li>
+                                <li>201 - Created</li>
+                                <li>202 - Accepted</li>
+                            </ul>
+                        </li>
+                        <li>3xx - Redirecciones
+                            <ul>
+                                <li>300 - Multiple Choice</li>
+                                <li>301 - Moved Permanently</li>
+                                <li>302 - Found</li>
+                            </ul>
+                        </li>
+                        <li>4xx - Errores del cliente
+                            <ul>
+                                <li>400 - Bad Request</li>
+                                <li>401 - Unauthorized</li>
+                                <li>403 - Forbidden</li>
+                                <li>404 - Not Found</li>
+                            </ul>
+                        </li>
+                        <li>5xx - Errores del servidor
+                            <ul>
+                                <li>500 - Internal Server Error</li>
+                                <li>501 - Not Implemented</li>
+                                <li>502 - Bad Gateway</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section>
+                <h2>DNS</h2>
+                <article>
+                    <h3>Funcionamiento DNS</h3>
+                    <p>
+                        Normalmente en nuestros clientes tenemos una ip la cual es la ip de nuestro servidor DNS,
+                        esta ip suele ser la que nos dan nuestros ISP, pero también podemos configurarla manualmente.
+                    </p>
+                    <p>
+                        Cuando un cliente quiere acceder a un recurso web por ejemplo www.google.com.
+                        Sucede estos pasos en los servidores DNS:
+                    </p>
+                    <ol>
+                        <li>
+                            Los servidores DNS que reciben la petición primero buscan
+                            en su memoria caché para ver si ya tienen la respuesta.
+                        </li>
+                        <li>
+                            Si la respuesta está en la caché, la devuelven inmediatamente.
+                        </li>
+                        <li>
+                            Si no está en la caché, inician una búsqueda en otros servidores DNS.
+                        </li>
+                        <li>
+                            Una vez encontrada la respuesta, el servidor DNS la guarda en su memoria caché para futuras consultas y devuelve el resultado al solicitante.
+                        </li>
+                    </ol>
+                </article>
+                <article>
+                    <h3>Tipos de registros</h3>
+                    <p>
+                        Los registros DNS son los encargados de traducir los nombres de dominio a direcciones IP.
+                        Estos registros se dividen en diferentes tipos:
+                    </p>
+                    <ul>
+                        <li><span class="negrita">A</span> - Permite traducir nombres a direcciones IPv4</li>
+                        <li><span class="negrita">AAAA</span> - Permite traducir nombres a direcciones IPv6</li>
+                        <li><span class="negrita">CNAME</span> - Permite traducir nombres a otros nombres de dominio</li>
+                        <li><span class="negrita">MX</span> - Permite traducir nombres a servidores de correo</li>
+                        <li><span class="negrita">NS</span> - Permite traducir nombres a servidores de nombres</li>
+                        <li><span class="negrita">PTR</span> - Permite traducir direcciones a nombres de dominio</li>
+                        <li><span class="negrita">SOA</span> - Permite traducir nombres a servidores de autoridad</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Resolucion directa e inversa</h3>
+                    <p>
+                        <span class="negrita">Resolución directa:</span> Traduce nombres de dominio a direcciones IP.
+                    </p>
+                    <p>
+                        <span class="negrita">Resolución inversa:</span> Traduce direcciones IP a nombres de dominio.
                     </p>
                 </article>
             </section>
@@ -51,51 +216,97 @@
                 <h2>Servidor WEB Apache</h2>
                 <article>
                     <h3>Características de Apache</h3>
-                    <p>
-
-                    </p>
+                    <ul>
+                        <li>Servidor web HTTP de código abierto</li>
+                        <li>Implementa el protocolo HTTP/1.1</li>
+                        <li>Modular</li>
+                        <li>Multi-plataforma (Windows, Linux, MacOS)</li>
+                        <li>Muy estable</li>
+                    </ul>
                 </article>
                 <article>
                     <h3>Arquitectura Servidor Apache</h3>
                     <p>
-
+                        Estructura de un servidor Apache:
                     </p>
+                    <img src="../img/arquitecturaApache.png" alt="Arquitectura Apache">
                 </article>
                 <article>
                     <h3>Contextos del Servidor</h3>
                     <p>
-                        Se heredan
+                        Apache tiene unos contextos de configuracion que se heredan <span class="negrita">heredan</span> que se aplican en diferentes niveles:
                     </p>
                     <div class="tarjetas tresCols">
                         <div>
                             <h4>Contexto Servidor</h4>
                             <p>
-
+                                En este contexto se definen las directivas que afectan a todo el servidor.
                             </p>
                         </div>
                         <div>
                             <h4>Contexto Virtual Host</h4>
                             <p>
-
+                                En este contexto se definen las directivas que afectan a un host virtual (aplicacion web).
                             </p>
                         </div>
                         <div>
                             <h4>Contexto de directorio</h4>
                             <p>
-
+                                En este contexto se definen las directivas que afectan a un directorio en concreto.
                             </p>
                         </div>
                     </div>
-                </article>
-            </section>
-            <section>
-                <h2>Instalación Apache</h2>
-                <!-- <p>En servidor Ubuntu Server 16.04</p> -->
-                <article>
-                    <h3>Comandos</h3>
+                    <div class="centrado">
+                        <img src="../img/contextosApache.png" alt="Contextos servidor Apache">
+                    </div>
                     <p>
-                        
+                        <span class="negrita">Nota:</span> Los contextos se heredan, es decir, si se define una directiva en un contexto superior, se aplicará en los contextos inferiores
                     </p>
+                </article>
+                <article>
+                    <h3>Buenas prácticas en las directivas</h3>
+                    <p>
+                        Para mantener una buena organización en la configuración de Apache es recomendable seguir estas buenas prácticas:
+                    </p>
+                    <ul>
+                        <li><span class="negrita">DirectoryIndex:</span> Especifica el archivo que se debe servir cuando se solicita un directorio.</li>
+                        <li><span class="negrita">Options:</span> Controla las características disponibles en un directorio.</li>
+                        <li><span class="negrita">AllowOverride:</span> Permite la configuración de directivas en archivos .htaccess.</li>
+                        <li><span class="negrita">Order / Require:</span> Controla el acceso a los recursos del servidor.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Directivas de contextos</h3>
+                    <p>
+                        Para consultar las directivas disponibles y cuales son sus valores disponemos de la página oficial de Apache:
+                        <a target="_blank" href="https://httpd.apache.org/docs/2.4/mod/directives.html">Directivas httpd apache oficial site</a>
+                    </p>
+                </article>
+                <article>
+                    <h3>Estructura de carpetas</h3>
+                    <p>
+                        La esctructura de carpetas de Apache es muy importante para la configuracion del resto
+                    </p>
+                    <div class="tarjetas tresCols">
+                        <div>
+                            <h4>Configuración Servidor</h4>
+                            <p>
+                                /etc/apache2
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Configuración Virtual Host</h4>
+                            <p>
+                                /etc/apache2/sites-available
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Estructuras de aplicaciones</h4>
+                            <p>
+                                /var/www
+                            </p>
+                        </div>
+                    </div>
                 </article>
             </section>
             <div id="mensajeCopiado"></div>
